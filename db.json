@@ -1,0 +1,354 @@
+{
+    "clothes": [
+      {
+        "id": 1,
+        "category": "shirts",
+        "img_url": "./public/img/shirt.png",
+        "price": 135,
+        "description": ""
+      },
+      {
+        "id": 2,
+        "category": "pants",
+        "img_url": "./public/img/pants.png",
+        "price": 45,
+        "description": ""
+      },
+      {
+        "id": 3,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 76,
+        "description": ""
+      },
+      {
+        "id": 4,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 87,
+        "description": ""
+      },
+      {
+        "id": 5,
+        "category": "pants",
+        "img_url": "./public/img/pants.png",
+        "price": 15,
+        "description": ""
+      },
+      {
+        "id": 6,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 220,
+        "description": ""
+      },
+      {
+        "id": 7,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 140,
+        "description": ""
+      },
+      {
+        "id": 8,
+        "category": "pants",
+        "img_url": "./public/img/pants.png",
+        "price": 15,
+        "description": ""
+      },
+      {
+        "id": 9,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 25,
+        "description": ""
+      },
+      {
+        "id": 10,
+        "category": "pants",
+        "img_url": "./public/img/pants.png",
+        "price": 15,
+        "description": ""
+      },
+      {
+        "id": 11,
+        "category": "shirts",
+        "img_url": "./public/img/shirt.png",
+        "price": 70,
+        "description": ""
+      },
+      {
+        "id": 12,
+        "category": "pants",
+        "img_url": "./public/img/pants.png",
+        "price": 15,
+        "description": ""
+      },
+      {
+        "id": 13,
+        "category": "shirts",
+        "img_url": "./public/img/shirt.png",
+        "price": 19,
+        "description": ""
+      },
+      {
+        "id": 14,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 25,
+        "description": ""
+      },
+      {
+        "id": 15,
+        "category": "pants",
+        "img_url": "./public/img/pants.png",
+        "price": 60,
+        "description": ""
+      },
+      {
+        "id": 16,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 40,
+        "description": ""
+      },
+      {
+        "id": 17,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 25,
+        "description": ""
+      },
+      {
+        "id": 18,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 59,
+        "description": ""
+      },
+      {
+        "id": 19,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 90,
+        "description": ""
+      },
+      {
+        "id": 20,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 280,
+        "description": ""
+      },
+      {
+        "id": 21,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 47,
+        "description": ""
+      },
+      {
+        "id": 22,
+        "category": "shirts",
+        "img_url": "./public/img/shirt.png",
+        "price": 60,
+        "description": ""
+      },
+      {
+        "id": 23,
+        "category": "pants",
+        "img_url": "./public/img/pants.png",
+        "price": 91,
+        "description": ""
+      },
+      {
+        "id": 24,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 22,
+        "description": ""
+      },
+      {
+        "id": 25,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 340,
+        "description": ""
+      },
+      {
+        "id": 26,
+        "category": "shirts",
+        "img_url": "./public/img/shirt.png",
+        "price": 18,
+        "description": ""
+      },
+      {
+        "id": 27,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 25,
+        "description": ""
+      },
+      {
+        "id": 28,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 98,
+        "description": ""
+      },
+      {
+        "id": 29,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 70,
+        "description": ""
+      },
+      {
+        "id": 30,
+        "category": "pants",
+        "img_url": "./public/img/pants.png",
+        "price": 15,
+        "description": ""
+      },
+      {
+        "id": 31,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 8,
+        "description": ""
+      },
+      {
+        "id": 32,
+        "category": "shirts",
+        "img_url": "./public/img/shirt.png",
+        "price": 20,
+        "description": ""
+      },
+      {
+        "id": 33,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 16,
+        "description": ""
+      },
+      {
+        "id": 34,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 48,
+        "description": ""
+      },
+      {
+        "id": 35,
+        "category": "pants",
+        "img_url": "./public/img/pants.png",
+        "price": 87,
+        "description": ""
+      },
+      {
+        "id": 36,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 32,
+        "description": ""
+      },
+      {
+        "id": 37,
+        "category": "pants",
+        "img_url": "./public/img/pants.png",
+        "price": 78,
+        "description": ""
+      },
+      {
+        "id": 38,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 105,
+        "description": ""
+      },
+      {
+        "id": 39,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 200,
+        "description": ""
+      },
+      {
+        "id": 40,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 50,
+        "description": ""
+      },
+      {
+        "id": 41,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 30,
+        "description": ""
+      },
+      {
+        "id": 42,
+        "category": "pants",
+        "img_url": "./public/img/pants.png",
+        "price": 210,
+        "description": ""
+      },
+      {
+        "id": 43,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 25,
+        "description": ""
+      },
+      {
+        "id": 44,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 67,
+        "description": ""
+      },
+      {
+        "id": 45,
+        "category": "shirts",
+        "img_url": "./public/img/shirt.png",
+        "price": 20,
+        "description": ""
+      },
+      {
+        "id": 46,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 90,
+        "description": ""
+      },
+      {
+        "id": 47,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 49,
+        "description": ""
+      },
+      {
+        "id": 48,
+        "category": "shirts",
+        "img_url": "./public/img/shirt.png",
+        "price": 26,
+        "description": ""
+      },
+      {
+        "id": 49,
+        "category": "shoes",
+        "img_url": "./public/img/shoes.png",
+        "price": 108,
+        "description": ""
+      },
+      {
+        "id": 50,
+        "category": "accessories",
+        "img_url": "./public/img/hat.png",
+        "price": 119,
+        "description": ""
+      }
+    ]
+  }
