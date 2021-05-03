@@ -3,13 +3,15 @@ import ClothingItem from './components/ClothingItem';
 import ClothingContainer from './containers/ClothingContainer';
 import Cart from './containers/Cart';
 import React from 'react';
+import NavBar from './components/NavBar'
 
 
 class App extends React.Component {
 
   state = {
     allClothes: [],
-    currentClothes: []
+    currentClothes: [],
+    cartContents: []
   }
 
   componentDidMount() {
@@ -18,17 +20,25 @@ class App extends React.Component {
     .then(data => {
       console.log(data);
       this.setState({
-        allClothes: data
+        allClothes: data,
+        currentClothes: data.splice(0,5)
       })
+    });
+  }
+
+  addToCart = (item) => {
+    this.setState({
+      cartContents: [...this.state.cartContents, item]
     })
+    console.log(this.state.cartContents)
   }
 
   render() {
     return (
       <div>
-        <ClothingItem />
-        <ClothingContainer allClothes={this.state.allClothes} />
-        <Cart />
+        <NavBar />
+        <ClothingContainer addToCart={this.addToCart} clothes={this.state.currentClothes} />
+        <Cart contents={this.state.cartContents}/>
       </div>
     );
   }

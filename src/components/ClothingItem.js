@@ -2,10 +2,18 @@ import react from 'react';
 
 const ClothingItem = (props) => {
 
+    const item = props.item;
+
+    const handleClick = (e) => {
+        const clothingToAdd = e.target.parentNode;
+        props.addToCart(clothingToAdd);
+    }
+
     return (
-        <div>
-            <h2>I am a clothing item</h2>
-            <h2>{console.log(props.item.color)}</h2>
+        <div className="clothing-item">
+            <p>I am a clothing item</p>
+            {/* {console.log(item)} */}
+            <button onClick={handleClick}>Add To Cart</button>
         </div>
     )
 }

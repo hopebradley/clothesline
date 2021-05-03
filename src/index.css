@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+.clothing-item {
+  float: left;
+  padding: 3%;
+  margin: 2%;
+  background-color: aquamarine;
+}
+
+.clothing-container {
+  padding-top: 10%;
+  margin: auto;
+  width: 80%;
+  position: absolute;
+}
+
+.cart {
+  color: blue;
+  float: left;
+  position: relative;
+}
