@@ -4,6 +4,10 @@ import ClothingContainer from './containers/ClothingContainer';
 import Cart from './containers/Cart';
 import React from 'react';
 import NavBar from './components/NavBar'
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
 
 
 class App extends React.Component {
@@ -35,11 +39,24 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <NavBar />
-        <ClothingContainer addToCart={this.addToCart} clothes={this.state.currentClothes} />
-        <Cart contents={this.state.cartContents}/>
-      </div>
+      <Router>
+        <div>
+          <NavBar />
+          <Route exact path="/" render={(props) => (
+            <ClothingContainer {...props} clothes={this.state.currentClothes} />
+          )}
+          />
+          <Route exact path="/all-clothes" render={(props) => (
+            <ClothingContainer {...props} clothes={this.state.allClothes} />
+          )}
+          />
+          <Route exact path="/cart" render={(props) => (
+            <Cart {...props} cartContents={this.state.cartContents} />
+          )}
+          />
+        </div>
+      </Router>
+      
     );
   }
   

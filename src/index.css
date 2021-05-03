@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,17 +10,40 @@ code {
     monospace;
 }
 
+.navbar {
+  padding: 3%;
+  background-color: lightblue;
+  color: black;
+}
 
+.nav-item {
+  
+  font-size: 25px;
+  font-weight: 700;
+  padding: 1%;
+  margin:3%;
+  text-decoration: none;
+  color: white;
+}
+#main-nav {
+  background-color: rgb(134, 196, 216);
+}
+
+.nav-item:visited {
+  padding: 5%;
+  text-decoration: none;
+  color: white;
+}
 
 .clothing-item {
   float: left;
   padding: 3%;
   margin: 2%;
-  background-color: aquamarine;
+  background-color: lightblue;
 }
 
 .clothing-container {
-  padding-top: 10%;
+  padding-top: 5%;
   margin: auto;
   width: 80%;
   position: absolute;
