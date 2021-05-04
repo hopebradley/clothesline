@@ -33,7 +33,7 @@ class App extends React.Component {
     });
   }
 
-  moveDisplay = (item) => {
+  moveDisplay = (item, clickedItemMessage) => {
     const index = this.state.displayClothes.indexOf(item);
     const newItemIndex = this.state.allClothes.indexOf(this.state.displayClothes[4]) + 1;
     const newDisplay = this.state.displayClothes.filter(theItem => theItem != item);
@@ -41,16 +41,20 @@ class App extends React.Component {
     this.setState({
       displayClothes: newDisplay
     })
+    clickedItemMessage.innerText = '';
   }
 
   addToCart = (e) => {
     const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
     console.log(clickedItem);
+    const clickedItemMessage = e.target.parentElement.children[3];
+    clickedItemMessage.innerText = "Added To Cart!";
+    window.setTimeout(() => this.moveDisplay(clickedItem, clickedItemMessage), 1500);
     clickedItem.bought = true;
     this.setState({
       allClothes: [...this.state.allClothes]
     })
-    this.moveDisplay(clickedItem);
+    
   }
 
   render() {

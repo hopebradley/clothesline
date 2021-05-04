@@ -74,9 +74,8 @@
   font-size: 15px;
 }
 
-.clothing-item {
-
-
+#cart-message {
+  color: green;
 }
 
 .clothing-container {
