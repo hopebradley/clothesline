@@ -24,7 +24,7 @@ class App extends React.Component {
       const allClothes = data.map(item => {
         return {...item, inCart: false, bought: false };
       });
-      allClothes.reverse();
+      allClothes.reverse(); //so the latest added items can be displayed at the front
       this.setState({
         allClothes: allClothes,
         displayClothes: allClothes.slice(0,5)
@@ -32,7 +32,7 @@ class App extends React.Component {
     });
   }
   
-  //CLOTHING LINE FUNCTIONS
+  //function to handle sliding items over when someone adds an item to the cart
   moveDisplay = (item, clickedItemMessage) => {
     const index = this.state.displayClothes.indexOf(item);
     const newItemIndex = this.state.allClothes.indexOf(this.state.displayClothes[4]) + 1;
@@ -44,7 +44,7 @@ class App extends React.Component {
     clickedItemMessage.innerText = '';
   }
 
-  //CART FUNCTIONS
+  //function for the "add to cart" button in the UnboughtItem component
   addToCart = (e) => {
     const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
     let clickedItemMessage = e.target.parentElement.children[2];
@@ -61,7 +61,7 @@ class App extends React.Component {
       })
     }
   }
-
+  //function for the "not interested" button in the UnboughtItem component
   notInterested = (e) => {
     const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
     let clickedItemMessage = e.target.parentElement.children[2];
@@ -76,6 +76,7 @@ class App extends React.Component {
       }, 700);
   }
 
+  //function for the "remove from cart" button in the CartItem component
   removeFromCart = (e) => {
     const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
     clickedItem.inCart = false;
@@ -84,6 +85,7 @@ class App extends React.Component {
     })
   }
 
+  //function for the "checkout" button in the Cart Component
   checkoutCart = (e) => {
     const thanks = e.target.parentElement.parentElement.children[2];
     const itemsToCheckout = Array.from(e.target.parentElement.parentElement.children[1].children);
@@ -113,6 +115,7 @@ class App extends React.Component {
     }
   }
 
+  //function for submit button in the ClothingForm component. Makes a POST request!
   addItem = (e) => {
     e.preventDefault();
     const formContents = Array.from(e.target.children);
@@ -172,6 +175,7 @@ class App extends React.Component {
     return (
       <Router>
         <div>
+
           <NavBar 
           closetItems={this.state.allClothes.filter(item => item.bought).length} 
           cartItems={this.state.allClothes.filter(item => item.inCart).length} 
@@ -179,20 +183,19 @@ class App extends React.Component {
 
           <Route exact path="/" render={(props) => (
             <ClothesOnLine {...props} clothes={this.state.displayClothes} addToCart={this.addToCart} notInterested={this.notInterested}/>
-          )}
-          />
+          )}/>
+
           <Route exact path="/cart" render={(props) => (
             <Cart {...props} removeFromCart={this.removeFromCart} checkoutCart={this.checkoutCart} clothes={this.state.allClothes} />
-          )}
-          />
+          )}/>
+
           <Route exact path="/sell" render={(props) => (
             <ClothingForm {...props} addItem={this.addItem} />
-          )}
-          />
+          )}/>
+          
           <Route exact path="/closet" render={(props) => (
             <Closet {...props} clothes={this.state.allClothes} />
-          )}
-          />
+          )}/>
           
         </div>
       </Router>
