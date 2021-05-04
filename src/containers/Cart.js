@@ -1,23 +1,24 @@
 import React from 'react';
-import BoughtItem from '../components/BoughtItem';
+import CartItem from '../components/CartItem';
 
 const Cart = (props) => {
 
-    const priceArray = props.clothes.filter(item => item.bought).map(item => item.price);
+    const priceArray = props.clothes.filter(item => item.inCart).map(item => item.price);
     let total;
     priceArray[0] ? total = priceArray.reduce((price, acc) => price + acc) : total = 0;
+    const cartItems = props.clothes.filter(item => item.inCart);
+
+
     return (
         <div className="cart">
             <div id="checkout-button">
                <h2>Cart Total: ${total ? total : "0"}</h2>
-               <button >CHECK OUT</button>
+               <button onClick={props.checkoutCart}>CHECK OUT</button>
+               <h3 id="insufficient-funds"></h3>
             </div>
-            <h1>CART:</h1>
-            {props.clothes.filter(item => item.bought).map(item => {
-                return <BoughtItem item={item}/> ;
-            })}
-
-            
+            <div>
+                {cartItems.length > 0 ? cartItems.map(item => <CartItem removeFromCart={props.removeFromCart} item={item}/>) : <h2>Cart is empty!</h2>}
+            </div>  
         </div>
     )
 }

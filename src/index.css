@@ -81,6 +81,15 @@
   font-size: x-large;
 }
 
+#insufficient-funds {
+  color: black;
+  border-radius: 20px;
+  width: 50%;
+  float: right;
+  font-size: 15px;
+  padding: 10px;
+}
+
 .cart-item {
   margin: 5%;
   height: 10%;
@@ -103,8 +112,9 @@
 .clothing-container {
   padding-top: 0%;
   width: 100%;
-  position: absolute;
 }
+
+
 
 .cart {
   color: black;

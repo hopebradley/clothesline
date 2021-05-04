@@ -7,7 +7,9 @@ const ClothesOnLine = (props) => {
             <div className="line"></div>
             <div className="clothing-container">
                 {props.clothes.map(theItem => <UnboughtItem item={theItem} addToCart={props.addToCart} /> )}
-            </div>
+            </div>  
+            <p style={{color: "grey", fontSize: "15px", textAlign: "center"}}>Clothes will move across the clothesline as you add items to your cart or remove them from the line.</p>
+            
         </div>
     )
 }

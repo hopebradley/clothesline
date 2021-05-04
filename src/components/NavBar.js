@@ -7,7 +7,7 @@ const NavBar = (props) => {
       <NavLink className="nav-item" activeClassName="active-item" id="main-nav" to="/"exact>CLOTHESLINE</NavLink>
       <NavLink className="nav-item" activeClassName="active-item" to="/cart">MY CART ({props.cartItems})</NavLink>
       <NavLink className="nav-item" activeClassName="active-item" to="/sell">SELL AN ITEM</NavLink>
-      <NavLink className="nav-item" activeClassName="active-item" to="/closet">MY CLOSET</NavLink>
+      <NavLink className="nav-item" activeClassName="active-item" to="/closet">MY CLOSET ({props.closetItems})</NavLink>
       <p className="funds">Funds: ${props.funds} </p>
     </div>
   );
