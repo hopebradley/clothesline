@@ -1,6 +1,6 @@
 import './App.css';
-import ClothingItem from './components/ClothingItem';
-import ClothingContainer from './containers/ClothingContainer';
+import ClothesOnLine from './containers/ClothesOnLine';
+import ClothingContainer from './containers/ClothingContainer'
 import Cart from './containers/Cart';
 import React from 'react';
 import NavBar from './components/NavBar'
@@ -43,7 +43,7 @@ class App extends React.Component {
         <div>
           <NavBar />
           <Route exact path="/" render={(props) => (
-            <ClothingContainer {...props} clothes={this.state.currentClothes} />
+            <ClothesOnLine {...props} clothes={this.state.currentClothes} />
           )}
           />
           <Route exact path="/all-clothes" render={(props) => (
