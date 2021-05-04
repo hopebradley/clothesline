@@ -5,7 +5,7 @@ const ItemInfo = (props) => {
     const item = props.item;
 
     return (
-            <div className="clothing-item">
+            <div id={item.id} className="clothing-item">
                 <div>
                     <img className="clothing-pic" src={item.img_url} alt="clothing" />
                     <p className="clothing-category">{item.category}</p>

@@ -1,5 +1,4 @@
 import React from 'react';
-import ClothingItem from '../components/ClothingItem';
 
 const Cart = (props) => {
     return (

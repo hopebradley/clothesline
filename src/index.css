@@ -22,6 +22,17 @@
   background-color: rgb(134, 196, 216);
 }
 
+.funds {
+  float: right;
+  color: rgb(92, 159, 86);
+  background-color: rgb(190, 233, 190);
+  font-weight: 700;
+  padding: 7px;
+  font-size: 25px;
+  margin-top: 0px;
+  border-radius: 10px;
+}
+
 .nav-item:visited {
   padding: 5%;
   text-decoration: none;

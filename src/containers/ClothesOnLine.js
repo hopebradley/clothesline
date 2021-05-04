@@ -1,11 +1,13 @@
 import React from 'react';
-import ClothingContainer from './ClothingContainer';
+import UnboughtItem from '../components/UnboughtItem';
 
 const ClothesOnLine = (props) => {
     return (
         <div>
             <div className="line"></div>
-            <ClothingContainer clothes={props.clothes} />
+            <div className="clothing-container">
+                {props.clothes.map(theItem => <UnboughtItem item={theItem} addToCart={props.addToCart} /> )}
+            </div>
         </div>
     )
 }
