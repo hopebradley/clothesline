@@ -17,8 +17,9 @@ const Cart = (props) => {
                <h3 id="insufficient-funds"></h3>
             </div>
             <div>
-                {cartItems.length > 0 ? cartItems.map(item => <CartItem removeFromCart={props.removeFromCart} item={item}/>) : <h2>Cart is empty!</h2>}
-            </div>  
+                {cartItems.length > 0 ? cartItems.map(item => <CartItem removeFromCart={props.removeFromCart} item={item}/>) : <h2>Your cart is empty.</h2>}
+            </div>
+            <h3 style={{color: "green"}}></h3>  
         </div>
     )
 }

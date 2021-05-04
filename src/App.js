@@ -16,6 +16,7 @@ class App extends React.Component {
     currentFunds: 200
   }
 
+  //INITIAL FETCH: puts all the db.json clothing objects into the state's allClothes array, and the first five objects into the displayClothes array
   componentDidMount() {
     fetch('http://localhost:3001/clothes')
     .then(resp => resp.json())
@@ -29,7 +30,8 @@ class App extends React.Component {
       })
     });
   }
-
+  
+  //CLOTHING LINE FUNCTIONS
   moveDisplay = (item, clickedItemMessage) => {
     const index = this.state.displayClothes.indexOf(item);
     const newItemIndex = this.state.allClothes.indexOf(this.state.displayClothes[4]) + 1;
@@ -41,7 +43,28 @@ class App extends React.Component {
     clickedItemMessage.innerText = '';
   }
 
+  //CART FUNCTIONS
+  addToCart = (e) => {
+    const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
+    const clickedItemMessage = e.target.parentElement.children[2];
+    clickedItemMessage.innerText = "Added To Cart!";
+    window.setTimeout(() => this.moveDisplay(clickedItem, clickedItemMessage), 500);
+    clickedItem.inCart = true;
+    this.setState({
+      allClothes: [...this.state.allClothes]
+    })
+  }
+
+  removeFromCart = (e) => {
+    const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
+    clickedItem.inCart = false;
+    this.setState({
+      allClothes: [...this.state.allClothes]
+    })
+  }
+
   checkoutCart = (e) => {
+    const thanks = e.target.parentElement.parentElement.children[2];
     const itemsToCheckout = Array.from(e.target.parentElement.parentElement.children[1].children);
     let subtotal = 0;
     itemsToCheckout.forEach(item => {
@@ -59,8 +82,9 @@ class App extends React.Component {
         allClothes: [...this.state.allClothes],
         currentFunds: newFunds
       })
-      // e.target.parentElement.parentElement.children[1].innerHTML = "Thank you for checking out! Check your closet to find your new items.";
-      // setTimeout(e.target.parentElement.parentElement.children[1].innerHTML = "Cart is empty!", 2000);
+      thanks.innerText = "Thanks for checking out! Check your closet to see your new items.";
+      setTimeout(() => thanks.innerText = "", 5000);
+
     }
     else {
       e.target.parentElement.children[2].innerText = "Sorry, but your funds are insufficient. Remove a few items and try again!";
@@ -68,26 +92,8 @@ class App extends React.Component {
     }
   }
 
-  removeFromCart = (e) => {
-    const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
-    clickedItem.inCart = false;
-    this.setState({
-      allClothes: [...this.state.allClothes]
-    })
-  }
 
-  addToCart = (e) => {
-    const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
-    const clickedItemMessage = e.target.parentElement.children[2];
-    clickedItemMessage.innerText = "Added To Cart!";
-    window.setTimeout(() => this.moveDisplay(clickedItem, clickedItemMessage), 500);
-    clickedItem.inCart = true;
-    this.setState({
-      allClothes: [...this.state.allClothes]
-    })
-    
-  }
-
+  //RENDERING AND ROUTES
   render() {
     return (
       <Router>

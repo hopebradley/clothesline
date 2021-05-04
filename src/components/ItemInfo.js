@@ -4,6 +4,9 @@ const ItemInfo = (props) => {
 
     const item = props.item;
 
+    let price;
+    props.bought ? price = "" : price = "$" + item.price;
+
     return (
             <div id={item.id} className="clothing-item">
                 <div>
@@ -11,7 +14,7 @@ const ItemInfo = (props) => {
                     <p className="clothing-category">{item.category}</p>
                 </div>
                 <h3>{item.color} {item.description}</h3>
-                <p>${item.price}</p>
+                <p>{price}</p>
             </div>
     )
 }

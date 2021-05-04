@@ -10,12 +10,17 @@
 }
 
 .nav-item {  
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 700;
   padding: 1%;
-  margin:3%;
+  margin:2%;
   text-decoration: none;
   color: white;
+}
+
+#main-nav {
+  margin-left: 0px;
+  font-size: 40px;
 }
 
 .active-item {
@@ -66,7 +71,7 @@
   float: left;
   margin-left: 2%;
   margin-right: 2%;
-  background-color: lightblue;
+  background-color: rgb(198, 210, 242);
   font-size: x-small;
   width: 14%;
   padding: 1%;
@@ -96,7 +101,17 @@
   width: 30%;
   background-color: pink;
   font-size: smaller;
-  padding: 5%;
+  padding: 2%;
+}
+
+.bought-item {
+  margin: 2%;
+  height: 80%;
+  float: left;
+  width: 20%;
+  background-color: orange;
+  font-size: smaller;
+  padding: 2%;
 }
 
 
