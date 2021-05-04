@@ -1,4 +1,5 @@
 import react from 'react';
+import ItemInfo from './ItemInfo'
 
 const ClothingItem = (props) => {
 
@@ -11,19 +12,11 @@ const ClothingItem = (props) => {
 
     return (
         <div className="entire-item">
-            <div className="clip"></div>
-            <div className="clothing-item">
-                <div>
-                    <img className="clothing-pic" src={item.img_url} alt="clothing" />
-                    <p className="clothing-category">{item.category}</p>
-                </div>
-                <h3>{item.color} {item.description}</h3>
-                <p>${item.price}</p>
-                <button onClick={handleClick}>Add To Cart</button>
-                <br></br>
-                <br></br>
-                <button>Not Interested</button>
-            </div>
+            <ItemInfo item={props.item} />
+            <button onClick={handleClick}>Add To Cart</button>
+            <br></br>
+            <br></br>
+            <button>Not Interested</button>
         </div>
     )
 }

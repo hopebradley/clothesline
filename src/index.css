@@ -48,14 +48,14 @@
   float: left;
   margin-left: 2%;
   margin-right: 2%;
+  background-color: lightblue;
+  font-size: x-small;
+  width: 15%;
+  padding: 1%;
+  margin: 2%;
+  margin-top: 0px;
 }
 
-.clip {
-  background-color: brown;
-  height: 10px;
-  width: 5px;
-  margin: auto;
-}
 
 .clothing-category {
   float: right;
@@ -63,12 +63,8 @@
 }
 
 .clothing-item {
-  width: 170px;
-  padding: 8%;
-  margin: 20%;
-  margin-top: 0px;
-  background-color: lightblue;
-  font-size: x-small;
+
+
 }
 
 .clothing-container {
