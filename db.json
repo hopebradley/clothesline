@@ -399,14 +399,6 @@
       "price": 119,
       "color": "Silver",
       "description": "Heart-Shaped Pendant"
-    },
-    {
-      "category": "Shirts",
-      "img_url": "./img/shirt.png",
-      "price": "3",
-      "color": "sfdg",
-      "description": "fsgf",
-      "id": 51
     }
   ]
 }

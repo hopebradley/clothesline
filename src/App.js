@@ -23,7 +23,8 @@ class App extends React.Component {
     .then(data => {
       const allClothes = data.map(item => {
         return {...item, inCart: false, bought: false };
-      })
+      });
+      allClothes.reverse();
       this.setState({
         allClothes: allClothes,
         displayClothes: allClothes.slice(0,5)
@@ -161,6 +162,7 @@ class App extends React.Component {
         displayClothes: newDisplay,
       })
     })
+    .then(() => window.location.href = 'http://localhost:3000/');
 
   }
 
