@@ -67,11 +67,27 @@
   margin-top:100px;
 }
 
+.form {
+  width: 300px;
+  margin: auto;
+  font-size:x-large;
+  background-color:rgb(235, 211, 112);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  border-radius: 20px;
+}
+
+#form-title {
+  text-align: center;
+}
+
 .entire-item {
   float: left;
   margin-left: 2%;
   margin-right: 2%;
-  background-color: rgb(198, 210, 242);
+  background-color: rgb(198, 214, 242);
   font-size: x-small;
   width: 14%;
   padding: 1%;

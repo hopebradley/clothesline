@@ -10,7 +10,7 @@ const UnboughtItem = (props) => {
             <ItemInfo item={props.item} />
             <button onClick={props.addToCart}>Add To Cart</button>
             <p id="cart-message"></p>
-            <button>Not Interested</button>
+            <button onClick={props.notInterested}>Not Interested</button>
         </div>
     )
 }

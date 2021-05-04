@@ -46,13 +46,33 @@ class App extends React.Component {
   //CART FUNCTIONS
   addToCart = (e) => {
     const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
-    const clickedItemMessage = e.target.parentElement.children[2];
-    clickedItemMessage.innerText = "Added To Cart!";
-    window.setTimeout(() => this.moveDisplay(clickedItem, clickedItemMessage), 500);
-    clickedItem.inCart = true;
-    this.setState({
-      allClothes: [...this.state.allClothes]
-    })
+    let clickedItemMessage = e.target.parentElement.children[2];
+    if (e.target.parentElement.id > 50) {
+      clickedItemMessage.innerText = "You can't add your own item to your cart!";
+      setTimeout(() => clickedItemMessage.innerText="", 1000);
+    }
+    else {
+      clickedItemMessage.innerText = "Added To Cart!";
+      window.setTimeout(() => this.moveDisplay(clickedItem, clickedItemMessage), 500);
+      clickedItem.inCart = true;
+      this.setState({
+        allClothes: [...this.state.allClothes]
+      })
+    }
+  }
+
+  notInterested = (e) => {
+    const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
+    let clickedItemMessage = e.target.parentElement.children[2];
+      clickedItemMessage.innerText = "We won't show you this again.";
+      window.setTimeout(() => {
+        clickedItemMessage.innerText = '';
+        const newClothes = this.state.allClothes.filter(item => item != clickedItem);
+        this.setState({
+          allClothes: newClothes,
+          displayClothes: newClothes.slice(0,5)
+        })
+      }, 700);
   }
 
   removeFromCart = (e) => {
@@ -92,6 +112,58 @@ class App extends React.Component {
     }
   }
 
+  addItem = (e) => {
+    e.preventDefault();
+    const formContents = Array.from(e.target.children);
+    const color = formContents[3].value;
+    const description = formContents[1].value;
+    const price = formContents[5].value;
+    const category = formContents[7][formContents[7].selectedIndex].value;
+    let image;
+    switch(category) {
+      case "Shirts":
+        image = "./img/shirt.png";
+        break;
+      case "Pants":
+        image = './img/pants.png';
+        break;
+      case "Shoes":
+        image = "./img/shoes.png";
+        break;
+      case "Accessories":
+        image = './img/hat.png';
+    }
+
+    const configObject = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        category: category,
+        img_url: image,
+        price: price,
+        color: color,
+        description: description
+      })
+    }
+
+    fetch('http://localhost:3001/clothes', configObject)
+    .then(resp => resp.json())
+    .then(data => {
+      console.log(data);
+      const newDisplay = [...this.state.displayClothes];
+      newDisplay.unshift(data);
+      newDisplay.pop();
+      console.log(newDisplay);
+      this.setState({
+        displayClothes: newDisplay,
+      })
+    })
+
+  }
+
 
   //RENDERING AND ROUTES
   render() {
@@ -104,7 +176,7 @@ class App extends React.Component {
           funds={this.state.currentFunds} />
 
           <Route exact path="/" render={(props) => (
-            <ClothesOnLine {...props} clothes={this.state.displayClothes} addToCart={this.addToCart}/>
+            <ClothesOnLine {...props} clothes={this.state.displayClothes} addToCart={this.addToCart} notInterested={this.notInterested}/>
           )}
           />
           <Route exact path="/cart" render={(props) => (
@@ -112,7 +184,7 @@ class App extends React.Component {
           )}
           />
           <Route exact path="/sell" render={(props) => (
-            <ClothingForm {...props}  />
+            <ClothingForm {...props} addItem={this.addItem} />
           )}
           />
           <Route exact path="/closet" render={(props) => (

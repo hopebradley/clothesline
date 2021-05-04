@@ -1,404 +1,412 @@
 {
-    "clothes": [
-      {
-        "id": 1,
-        "category": "shirts",
-        "img_url": "./img/shirt.png",
-        "price": 135,
-        "color": "Blue",
-        "description": "Striped Tee"
-      },
-      {
-        "id": 2,
-        "category": "pants",
-        "img_url": "./img/pants.png",
-        "price": 45,
-        "color": "Black",
-        "description": "Cut-off Jeans"
-      },
-      {
-        "id": 3,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 76,
-        "color": "Pink",
-        "description": "Nike Trainers"
-      },
-      {
-        "id": 4,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 87,
-        "color": "White",
-        "description": "Pearl Necklace"
-      },
-      {
-        "id": 5,
-        "category": "pants",
-        "img_url": "./img/pants.png",
-        "price": 15,
-        "color": "Purple",
-        "description": "Corduroy Pants"
-      },
-      {
-        "id": 6,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 220,
-        "color": "Blue",
-        "description": "Platform Heels"
-      },
-      {
-        "id": 7,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 140,
-        "color": "Gold",
-        "description": "Earrings"
-      },
-      {
-        "id": 8,
-        "category": "pants",
-        "img_url": "./img/pants.png",
-        "price": 15,
-        "color": "White",
-        "description": "Pajama Shorts"
-      },
-      {
-        "id": 9,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 25,
-        "color": "Green",
-        "description": "Baseball Cap"
-      },
-      {
-        "id": 10,
-        "category": "pants",
-        "img_url": "./img/pants.png",
-        "price": 15,
-        "color": "Red",
-        "description": "Work Pants"
-      },
-      {
-        "id": 11,
-        "category": "shirts",
-        "img_url": "./img/shirt.png",
-        "price": 70,
-        "color": "Pink",
-        "description": "Gym Shirt"
-      },
-      {
-        "id": 12,
-        "category": "pants",
-        "img_url": "./img/pants.png",
-        "price": 15,
-        "color": "Orange",
-        "description": "Gym Shorts"
-      },
-      {
-        "id": 13,
-        "category": "shirts",
-        "img_url": "./img/shirt.png",
-        "price": 19,
-        "color": "Red",
-        "description": "Plain Tee"
-      },
-      {
-        "id": 14,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 25,
-        "color": "White",
-        "description": "Circle Sunglasses"
-      },
-      {
-        "id": 15,
-        "category": "pants",
-        "img_url": "./img/pants.png",
-        "price": 60,
-        "color": "Pink",
-        "description": "Pajama Pants"
-      },
-      {
-        "id": 16,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 40,
-        "color": "Brown",
-        "description": "Flip-Flops"
-      },
-      {
-        "id": 17,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 25,
-        "color": "Red",
-        "description": "Spider-Man Mask"
-      },
-      {
-        "id": 18,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 59,
-        "color": "Green",
-        "description": "Dotted Slippers"
-      },
-      {
-        "id": 19,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 90,
-        "color": "Silver",
-        "description": "Eyeglasses"
-      },
-      {
-        "id": 20,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 280,
-        "color": "Silver",
-        "description": "Vintage High Heels"
-      },
-      {
-        "id": 21,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 47,
-        "color": "Gold",
-        "description": "Masquerade Mask"
-      },
-      {
-        "id": 22,
-        "category": "shirts",
-        "img_url": "./img/shirt.png",
-        "price": 60,
-        "color": "Yellow",
-        "description": "Button-Up Shirt"
-      },
-      {
-        "id": 23,
-        "category": "pants",
-        "img_url": "./img/pants.png",
-        "price": 91,
-        "color": "Blue",
-        "description": "Jean Shorts"
-      },
-      {
-        "id": 24,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 22,
-        "color": "Blue",
-        "description": "Snorkel"
-      },
-      {
-        "id": 25,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 340,
-        "color": "Gold",
-        "description": "Limited-Edition Prada Slippers"
-      },
-      {
-        "id": 26,
-        "category": "shirts",
-        "img_url": "./img/shirt.png",
-        "price": 18,
-        "color": "White",
-        "description": "Summer Tank Top"
-      },
-      {
-        "id": 27,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 25,
-        "color": "Brown",
-        "description": "Sport Sunglasses"
-      },
-      {
-        "id": 28,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 98,
-        "color": "Orange",
-        "description": "Faux-Fur Slippers"
-      },
-      {
-        "id": 29,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 70,
-        "color": "White",
-        "description": "Gemstone Bracelet"
-      },
-      {
-        "id": 30,
-        "category": "pants",
-        "img_url": "./img/pants.png",
-        "price": 15,
-        "color": "Black",
-        "description": "Sweatpants"
-      },
-      {
-        "id": 31,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 8,
-        "color": "Brown",
-        "description": "Cowboy Hat"
-      },
-      {
-        "id": 32,
-        "category": "shirts",
-        "img_url": "./img/shirt.png",
-        "price": 20,
-        "color": "Blue",
-        "description": "Long-Sleeve Tee"
-      },
-      {
-        "id": 33,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 16,
-        "color": "Silver",
-        "description": "High-Heeled Sandals"
-      },
-      {
-        "id": 34,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 48,
-        "color": "Pink",
-        "description": "Ruffled Socks"
-      },
-      {
-        "id": 35,
-        "category": "pants",
-        "img_url": "./img/pants.png",
-        "price": 87,
-        "color": "Blue",
-        "description": "Acid-Wash Jeans"
-      },
-      {
-        "id": 36,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 32,
-        "color": "Purple",
-        "description": "Sunglasses"
-      },
-      {
-        "id": 37,
-        "category": "pants",
-        "img_url": "./img/pants.png",
-        "price": 78,
-        "color": "Brown",
-        "description": "Khakis"
-      },
-      {
-        "id": 38,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 105,
-        "color": "White",
-        "description": "Classic Adidas"
-      },
-      {
-        "id": 39,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 200,
-        "color": "White",
-        "description": "Diamond Earrings"
-      },
-      {
-        "id": 40,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 50,
-        "color": "Red",
-        "description": "Wide-Brim Hat"
-      },
-      {
-        "id": 41,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 30,
-        "color": "Blue",
-        "description": "Headband Set"
-      },
-      {
-        "id": 42,
-        "category": "pants",
-        "img_url": "./img/pants.png",
-        "price": 210,
-        "color": "Orange",
-        "description": "Cycling Shorts"
-      },
-      {
-        "id": 43,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 25,
-        "color": "Gold",
-        "description": "Chain Necklace"
-      },
-      {
-        "id": 44,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 67,
-        "color": "Grey",
-        "description": "Walking Shoes"
-      },
-      {
-        "id": 45,
-        "category": "shirts",
-        "img_url": "./img/shirt.png",
-        "price": 20,
-        "color": "Orange",
-        "description": "Tank Top"
-      },
-      {
-        "id": 46,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 90,
-        "color": "Green",
-        "description": "Jade Earrings"
-      },
-      {
-        "id": 47,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 49,
-        "color": "Black",
-        "description": "Ballet Flats"
-      },
-      {
-        "id": 48,
-        "category": "shirts",
-        "img_url": "./img/shirt.png",
-        "price": 26,
-        "color": "Black",
-        "description": "Flowery Blouse"
-      },
-      {
-        "id": 49,
-        "category": "shoes",
-        "img_url": "./img/shoes.png",
-        "price": 108,
-        "color": "Green",
-        "description": "Sandals"
-      },
-      {
-        "id": 50,
-        "category": "accessories",
-        "img_url": "./img/hat.png",
-        "price": 119,
-        "color": "Silver",
-        "description": "Heart-Shaped Pendant"
-      }
-    ]
-  }
+  "clothes": [
+    {
+      "id": 1,
+      "category": "shirts",
+      "img_url": "./img/shirt.png",
+      "price": 135,
+      "color": "Blue",
+      "description": "Striped Tee"
+    },
+    {
+      "id": 2,
+      "category": "pants",
+      "img_url": "./img/pants.png",
+      "price": 45,
+      "color": "Black",
+      "description": "Cut-off Jeans"
+    },
+    {
+      "id": 3,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 76,
+      "color": "Pink",
+      "description": "Nike Trainers"
+    },
+    {
+      "id": 4,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 87,
+      "color": "White",
+      "description": "Pearl Necklace"
+    },
+    {
+      "id": 5,
+      "category": "pants",
+      "img_url": "./img/pants.png",
+      "price": 15,
+      "color": "Purple",
+      "description": "Corduroy Pants"
+    },
+    {
+      "id": 6,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 220,
+      "color": "Blue",
+      "description": "Platform Heels"
+    },
+    {
+      "id": 7,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 140,
+      "color": "Gold",
+      "description": "Earrings"
+    },
+    {
+      "id": 8,
+      "category": "pants",
+      "img_url": "./img/pants.png",
+      "price": 15,
+      "color": "White",
+      "description": "Pajama Shorts"
+    },
+    {
+      "id": 9,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 25,
+      "color": "Green",
+      "description": "Baseball Cap"
+    },
+    {
+      "id": 10,
+      "category": "pants",
+      "img_url": "./img/pants.png",
+      "price": 15,
+      "color": "Red",
+      "description": "Work Pants"
+    },
+    {
+      "id": 11,
+      "category": "shirts",
+      "img_url": "./img/shirt.png",
+      "price": 70,
+      "color": "Pink",
+      "description": "Gym Shirt"
+    },
+    {
+      "id": 12,
+      "category": "pants",
+      "img_url": "./img/pants.png",
+      "price": 15,
+      "color": "Orange",
+      "description": "Gym Shorts"
+    },
+    {
+      "id": 13,
+      "category": "shirts",
+      "img_url": "./img/shirt.png",
+      "price": 19,
+      "color": "Red",
+      "description": "Plain Tee"
+    },
+    {
+      "id": 14,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 25,
+      "color": "White",
+      "description": "Circle Sunglasses"
+    },
+    {
+      "id": 15,
+      "category": "pants",
+      "img_url": "./img/pants.png",
+      "price": 60,
+      "color": "Pink",
+      "description": "Pajama Pants"
+    },
+    {
+      "id": 16,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 40,
+      "color": "Brown",
+      "description": "Flip-Flops"
+    },
+    {
+      "id": 17,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 25,
+      "color": "Red",
+      "description": "Spider-Man Mask"
+    },
+    {
+      "id": 18,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 59,
+      "color": "Green",
+      "description": "Dotted Slippers"
+    },
+    {
+      "id": 19,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 90,
+      "color": "Silver",
+      "description": "Eyeglasses"
+    },
+    {
+      "id": 20,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 280,
+      "color": "Silver",
+      "description": "Vintage High Heels"
+    },
+    {
+      "id": 21,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 47,
+      "color": "Gold",
+      "description": "Masquerade Mask"
+    },
+    {
+      "id": 22,
+      "category": "shirts",
+      "img_url": "./img/shirt.png",
+      "price": 60,
+      "color": "Yellow",
+      "description": "Button-Up Shirt"
+    },
+    {
+      "id": 23,
+      "category": "pants",
+      "img_url": "./img/pants.png",
+      "price": 91,
+      "color": "Blue",
+      "description": "Jean Shorts"
+    },
+    {
+      "id": 24,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 22,
+      "color": "Blue",
+      "description": "Snorkel"
+    },
+    {
+      "id": 25,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 340,
+      "color": "Gold",
+      "description": "Limited-Edition Prada Slippers"
+    },
+    {
+      "id": 26,
+      "category": "shirts",
+      "img_url": "./img/shirt.png",
+      "price": 18,
+      "color": "White",
+      "description": "Summer Tank Top"
+    },
+    {
+      "id": 27,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 25,
+      "color": "Brown",
+      "description": "Sport Sunglasses"
+    },
+    {
+      "id": 28,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 98,
+      "color": "Orange",
+      "description": "Faux-Fur Slippers"
+    },
+    {
+      "id": 29,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 70,
+      "color": "White",
+      "description": "Gemstone Bracelet"
+    },
+    {
+      "id": 30,
+      "category": "pants",
+      "img_url": "./img/pants.png",
+      "price": 15,
+      "color": "Black",
+      "description": "Sweatpants"
+    },
+    {
+      "id": 31,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 8,
+      "color": "Brown",
+      "description": "Cowboy Hat"
+    },
+    {
+      "id": 32,
+      "category": "shirts",
+      "img_url": "./img/shirt.png",
+      "price": 20,
+      "color": "Blue",
+      "description": "Long-Sleeve Tee"
+    },
+    {
+      "id": 33,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 16,
+      "color": "Silver",
+      "description": "High-Heeled Sandals"
+    },
+    {
+      "id": 34,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 48,
+      "color": "Pink",
+      "description": "Ruffled Socks"
+    },
+    {
+      "id": 35,
+      "category": "pants",
+      "img_url": "./img/pants.png",
+      "price": 87,
+      "color": "Blue",
+      "description": "Acid-Wash Jeans"
+    },
+    {
+      "id": 36,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 32,
+      "color": "Purple",
+      "description": "Sunglasses"
+    },
+    {
+      "id": 37,
+      "category": "pants",
+      "img_url": "./img/pants.png",
+      "price": 78,
+      "color": "Brown",
+      "description": "Khakis"
+    },
+    {
+      "id": 38,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 105,
+      "color": "White",
+      "description": "Classic Adidas"
+    },
+    {
+      "id": 39,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 200,
+      "color": "White",
+      "description": "Diamond Earrings"
+    },
+    {
+      "id": 40,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 50,
+      "color": "Red",
+      "description": "Wide-Brim Hat"
+    },
+    {
+      "id": 41,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 30,
+      "color": "Blue",
+      "description": "Headband Set"
+    },
+    {
+      "id": 42,
+      "category": "pants",
+      "img_url": "./img/pants.png",
+      "price": 210,
+      "color": "Orange",
+      "description": "Cycling Shorts"
+    },
+    {
+      "id": 43,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 25,
+      "color": "Gold",
+      "description": "Chain Necklace"
+    },
+    {
+      "id": 44,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 67,
+      "color": "Grey",
+      "description": "Walking Shoes"
+    },
+    {
+      "id": 45,
+      "category": "shirts",
+      "img_url": "./img/shirt.png",
+      "price": 20,
+      "color": "Orange",
+      "description": "Tank Top"
+    },
+    {
+      "id": 46,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 90,
+      "color": "Green",
+      "description": "Jade Earrings"
+    },
+    {
+      "id": 47,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 49,
+      "color": "Black",
+      "description": "Ballet Flats"
+    },
+    {
+      "id": 48,
+      "category": "shirts",
+      "img_url": "./img/shirt.png",
+      "price": 26,
+      "color": "Black",
+      "description": "Flowery Blouse"
+    },
+    {
+      "id": 49,
+      "category": "shoes",
+      "img_url": "./img/shoes.png",
+      "price": 108,
+      "color": "Green",
+      "description": "Sandals"
+    },
+    {
+      "id": 50,
+      "category": "accessories",
+      "img_url": "./img/hat.png",
+      "price": 119,
+      "color": "Silver",
+      "description": "Heart-Shaped Pendant"
+    },
+    {
+      "category": "Shirts",
+      "img_url": "./img/shirt.png",
+      "price": "3",
+      "color": "sfdg",
+      "description": "fsgf",
+      "id": 51
+    }
+  ]
+}
