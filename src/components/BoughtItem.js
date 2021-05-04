@@ -6,8 +6,9 @@ const BoughtItem = (props) => {
     const item = props.item;
 
     return (
-        <div className="entire-item">
+        <div className="cart-item">
             <ItemInfo item={props.item} />
+            <button>Remove From Cart</button>
         </div>
     )
 }

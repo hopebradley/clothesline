@@ -44,10 +44,14 @@ class App extends React.Component {
     clickedItemMessage.innerText = '';
   }
 
+  checkoutCart = (e) => {
+    console.log("Checked Out.")
+  }
+
   addToCart = (e) => {
     const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
     console.log(clickedItem);
-    const clickedItemMessage = e.target.parentElement.children[3];
+    const clickedItemMessage = e.target.parentElement.children[2];
     clickedItemMessage.innerText = "Added To Cart!";
     window.setTimeout(() => this.moveDisplay(clickedItem, clickedItemMessage), 1500);
     clickedItem.bought = true;

@@ -9,8 +9,7 @@
   color: black;
 }
 
-.nav-item {
-  
+.nav-item {  
   font-size: 25px;
   font-weight: 700;
   padding: 1%;
@@ -18,7 +17,14 @@
   text-decoration: none;
   color: white;
 }
-#main-nav {
+
+.active-item {
+  font-size: 25px;
+  font-weight: 700;
+  padding: 1%;
+  margin:3%;
+  text-decoration: none;
+  color: white;
   background-color: rgb(134, 196, 216);
 }
 
@@ -68,6 +74,22 @@
   margin-top: 0px;
 }
 
+#checkout-button {
+  float: right;
+  margin: 5%;
+  color: green;
+  font-size: x-large;
+}
+
+.cart-item {
+  margin: 5%;
+  height: 10%;
+  width: 30%;
+  background-color: pink;
+  font-size: smaller;
+  padding: 5%;
+}
+
 
 .clothing-category {
   float: right;
@@ -85,7 +107,6 @@
 }
 
 .cart {
-  color: blue;
-  float: left;
-  position: relative;
+  color: black;
+  margin-left: 3%;
 }
