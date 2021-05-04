@@ -1,12 +1,13 @@
 import React from 'react';
+import ItemInfo from '../components/ItemInfo';
 
 const Cart = (props) => {
     return (
         <div className="cart">
             <h1>I am the cart</h1>
-            {/* {props.cartContents.map(item => {
-                return "Theres a new Cart item now";
-            })} */}
+            {props.clothes.filter(item => item.bought).map(item => {
+                return <ItemInfo item={item}/> ;
+            })}
         </div>
     )
 }

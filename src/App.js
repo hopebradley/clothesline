@@ -33,23 +33,31 @@ class App extends React.Component {
     });
   }
 
-  addToCart = (e) => {
-    const itemID = e.target.parentElement.children[0].id;
-    console.log(itemID);
+  moveDisplay = (item) => {
+    const index = this.state.displayClothes.indexOf(item);
+    const newItemIndex = this.state.allClothes.indexOf(this.state.displayClothes[4]) + 1;
+    const newDisplay = this.state.displayClothes.filter(theItem => theItem != item);
+    newDisplay.push(this.state.allClothes[newItemIndex]);
+    this.setState({
+      displayClothes: newDisplay
+    })
+  }
 
-    console.log(this.state.allClothes.find(item => item.id == itemID));
-    // console.log(clickedItem);
-    // this.setState({
-    //   cartContents: [...this.state.cartContents, item]
-    // })
-    // console.log(this.state.cartContents)
+  addToCart = (e) => {
+    const clickedItem = this.state.allClothes.find(item => item.id == e.target.parentElement.children[0].id);
+    console.log(clickedItem);
+    clickedItem.bought = true;
+    this.setState({
+      allClothes: [...this.state.allClothes]
+    })
+    this.moveDisplay(clickedItem);
   }
 
   render() {
     return (
       <Router>
         <div>
-          <NavBar funds={this.state.currentFunds} />
+          <NavBar cartItems={this.state.allClothes.filter(item => item.bought).length} funds={this.state.currentFunds} />
           <Route exact path="/" render={(props) => (
             <ClothesOnLine {...props} clothes={this.state.displayClothes} addToCart={this.addToCart}/>
           )}
