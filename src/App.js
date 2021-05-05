@@ -3,7 +3,6 @@ import ClothesOnLine from './containers/ClothesOnLine';
 import Closet from './containers/Closet';
 import ClothingForm from './components/ClothingForm';
 import Cart from './containers/Cart';
-import ReturnItem from './components/ReturnItem';
 import React from 'react';
 import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -14,7 +13,7 @@ class App extends React.Component {
   state = {
     allClothes: [],
     displayClothes: [],
-    currentFunds: 300
+    currentFunds: 200
   }
 
   //INITIAL FETCH: puts all the db.json clothing objects into the state's allClothes array, and the first five objects into the displayClothes array
@@ -51,7 +50,7 @@ class App extends React.Component {
     let clickedItemMessage = e.target.parentElement.children[2];
     if (e.target.parentElement.id > 50) {
       clickedItemMessage.innerText = "You can't add your own item to your cart!";
-      setTimeout(() => clickedItemMessage.innerText="", 2000);
+      setTimeout(() => clickedItemMessage.innerText="", 1000);
     }
     else {
       clickedItemMessage.innerText = "Added To Cart!";
@@ -166,23 +165,9 @@ class App extends React.Component {
         displayClothes: newDisplay,
       })
     })
-    .then(() => {
-      formContents[8].innerText = "Thank you for adding an item to the ClothesLine!";
-      setTimeout(() => formContents[8].innerText = "", 2000);
-    });
-  }
+    .then(() => window.location.href = 'http://localhost:3000/');
 
-  // returnItem = (e) => {
-  //   console.log(e.target.parentElement);
-  //   const itemToReturn = this.state.allClothes.find(item => item.id == e.target.parentElement.id);
-  //   itemToReturn.bought = false;
-  //   const newFunds = this.state.currentFunds + itemToReturn.price;
-  //   this.setState({
-  //     allClothes: [...this.state.allClothes],
-  //     currentFunds: newFunds
-  //   })
-  //   console.log(itemToReturn);
-  // }
+  }
 
 
   //RENDERING AND ROUTES
@@ -209,7 +194,7 @@ class App extends React.Component {
           )}/>
           
           <Route exact path="/closet" render={(props) => (
-            <Closet {...props}  clothes={this.state.allClothes} />
+            <Closet {...props} clothes={this.state.allClothes} />
           )}/>
           
         </div>

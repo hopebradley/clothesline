@@ -15,4 +15,4 @@ const UnboughtItem = (props) => {
     )
 }
 
-export default UnboughtItem;
+export default UnboughtItem
