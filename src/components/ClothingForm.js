@@ -19,8 +19,7 @@ const ClothingForm = (props) => {
                     <option>Shoes</option>
                     <option>Accessories</option>
                 </select>
-                <br></br>
-                <br></br>
+                <p></p>
                 <input type="submit"></input>
             </form>
         </div>

@@ -9,7 +9,7 @@ const Closet = (props) => {
         <div className="closet">
             <h1>Welcome to your closet!</h1>
             <div>
-                {closetItems.length > 0 ? closetItems.map(item => <BoughtItem item={item}/>) : <h2>...it's empty.</h2>}
+                {closetItems.length > 0 ? closetItems.map(item => <BoughtItem returnItem={props.returnItem} item={item}/>) : <h2>...it's empty.</h2>}
             </div>
         </div>
     )

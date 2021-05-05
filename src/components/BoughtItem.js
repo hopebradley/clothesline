@@ -8,6 +8,7 @@ const BoughtItem = (props) => {
     return (
         <div id={item.id} className="bought-item">
             <ItemInfo bought={true} item={props.item} />
+            <button onClick={props.returnItem}>Return Item</button>
         </div>
     )
 }

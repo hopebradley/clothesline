@@ -13,7 +13,7 @@ class App extends React.Component {
   state = {
     allClothes: [],
     displayClothes: [],
-    currentFunds: 200
+    currentFunds: 300
   }
 
   //INITIAL FETCH: puts all the db.json clothing objects into the state's allClothes array, and the first five objects into the displayClothes array
@@ -50,7 +50,7 @@ class App extends React.Component {
     let clickedItemMessage = e.target.parentElement.children[2];
     if (e.target.parentElement.id > 50) {
       clickedItemMessage.innerText = "You can't add your own item to your cart!";
-      setTimeout(() => clickedItemMessage.innerText="", 1000);
+      setTimeout(() => clickedItemMessage.innerText="", 2000);
     }
     else {
       clickedItemMessage.innerText = "Added To Cart!";
@@ -165,8 +165,16 @@ class App extends React.Component {
         displayClothes: newDisplay,
       })
     })
-    .then(() => window.location.href = 'http://localhost:3000/');
+    .then(() => {
+      formContents[8].innerText = "Thank you for adding an item to the ClothesLine!";
+      setTimeout(() => formContents[8].innerText = "", 2000);
+    });
+  }
 
+  returnItem = (e) => {
+    console.log(e.target.parentElement);
+    const itemToReturn = this.state.allClothes.find(item => item.id == e.target.parentElement.id);
+    console.log(itemToReturn);
   }
 
 
@@ -194,7 +202,7 @@ class App extends React.Component {
           )}/>
           
           <Route exact path="/closet" render={(props) => (
-            <Closet {...props} clothes={this.state.allClothes} />
+            <Closet {...props} returnItem={this.returnItem} clothes={this.state.allClothes} />
           )}/>
           
         </div>
