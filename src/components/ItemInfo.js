@@ -10,7 +10,8 @@ const ItemInfo = (props) => {
     return (
             <div id={item.id} className="clothing-item">
                 <div>
-                    <img className="clothing-pic" src={item.img_url} alt="clothing" />
+                    <img className="clothing-pic" src={`.${item.img_url}`} alt="clothing" />
+                    {console.log(item.img_url)}
                     <p className="clothing-category">{item.category}</p>
                 </div>
                 <h3>{item.color} {item.description}</h3>

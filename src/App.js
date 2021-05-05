@@ -4,6 +4,7 @@ import Closet from './containers/Closet';
 import ClothingForm from './components/ClothingForm';
 import Cart from './containers/Cart';
 import React from 'react';
+import ReturnItem from './components/ReturnItem';
 import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -169,6 +170,23 @@ class App extends React.Component {
 
   }
 
+  returnItem = (e) => {
+    const element = e.target.parentElement;
+    const id = element.id;
+    const itemToReturn = this.state.allClothes.find(item => item.id == id);
+    itemToReturn.bought=false;
+    const newFunds = this.state.currentFunds + itemToReturn.price;
+    const message = element.children[4];
+    element.removeChild(element.children[2]);
+    element.children[0].innerText = "Success!";
+    message.innerText = "Item returned to ClothesLine, and funds added back to your account!";
+
+    this.setState({
+      allClothes: [...this.state.allClothes],
+      currentFunds: newFunds
+    })
+  }
+
 
   //RENDERING AND ROUTES
   render() {
@@ -193,9 +211,14 @@ class App extends React.Component {
             <ClothingForm {...props} addItem={this.addItem} />
           )}/>
           
-          <Route exact path="/closet" render={(props) => (
-            <Closet {...props} clothes={this.state.allClothes} />
+          <Route exact path="/closet" render={(routerProps) => (
+            <Closet {...routerProps} clothes={this.state.allClothes} />
           )}/>
+
+          <Route exact path="/closet/:id" render={(routerProps) => (
+            <ReturnItem {...routerProps} clothes={this.state.allClothes} returnItem={this.returnItem}/>
+          )}/>
+
           
         </div>
       </Router>
