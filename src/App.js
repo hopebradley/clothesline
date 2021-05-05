@@ -3,6 +3,7 @@ import ClothesOnLine from './containers/ClothesOnLine';
 import Closet from './containers/Closet';
 import ClothingForm from './components/ClothingForm';
 import Cart from './containers/Cart';
+import ReturnItem from './components/ReturnItem';
 import React from 'react';
 import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -171,11 +172,17 @@ class App extends React.Component {
     });
   }
 
-  returnItem = (e) => {
-    console.log(e.target.parentElement);
-    const itemToReturn = this.state.allClothes.find(item => item.id == e.target.parentElement.id);
-    console.log(itemToReturn);
-  }
+  // returnItem = (e) => {
+  //   console.log(e.target.parentElement);
+  //   const itemToReturn = this.state.allClothes.find(item => item.id == e.target.parentElement.id);
+  //   itemToReturn.bought = false;
+  //   const newFunds = this.state.currentFunds + itemToReturn.price;
+  //   this.setState({
+  //     allClothes: [...this.state.allClothes],
+  //     currentFunds: newFunds
+  //   })
+  //   console.log(itemToReturn);
+  // }
 
 
   //RENDERING AND ROUTES
@@ -202,7 +209,7 @@ class App extends React.Component {
           )}/>
           
           <Route exact path="/closet" render={(props) => (
-            <Closet {...props} returnItem={this.returnItem} clothes={this.state.allClothes} />
+            <Closet {...props}  clothes={this.state.allClothes} />
           )}/>
           
         </div>
