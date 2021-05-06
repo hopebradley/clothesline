@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Inside the app directory, run:
 
-### 'json-server --watch db.json --port 3001'
+### `json-server --watch db.json --port 3001`
 so that the app has access to the clothing database.
 
 To open the app in the browser, run
